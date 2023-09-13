@@ -2,6 +2,7 @@ const express = require('express');
 require('dotenv').config();
 const colors = require('colors');
 const drinks = require('./models/drinks');
+const foods = require('./models/foods')
 const morgan = require('morgan');
 const PORT = process.env.PORT;
 //Initialization.....
@@ -19,10 +20,22 @@ app.get('/drinks', (req, res) => {
     })
 })
 
+app.get('/foods', (req, res) => {
+    res.render('food_index.ejs', {
+        allFoods : foods
+    })
+})
+
 //Show Route...
 app.get('/drinks/:id', (req, res) => {
     res.render('show.ejs', {
         drink : drinks[req.params.id]
+    })
+})
+
+app.get('/foods/:id', (req, res) => {
+    res.render('food_show.ejs', {
+        food: foods[req.params.id]
     })
 })
 
