@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Show</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            border-radius: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+
+            font-style: italic;
+            font-size: 30px;
+        }
+        a, .return {
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+        }
+
+        a:hover {
+            border-bottom: 2px solid red;
+            font-size: 25px;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Showing Food 😋</h1>
-    <p>
-      Name: <%= food.name %> <br>
-      Price: $<%= food.price %> <br>
-      <img src="<%= food.image %>" alt="food"> 
+
+    <div class="container">
+        <p>
+            <span>Name:</span>
+            <%= food.name %> <br>
+                <span>Price: </span> $<%= food.price %> <br>
+        </p>
+        <img src="<%= food.image %>" alt="food">
+
+    </div>
+    <p class="return">
+        <a href="/foods">Back to Foods</a>
     </p>
 
-    <a href="/foods">Back to Foods</a>
 </body>
+
 </html>

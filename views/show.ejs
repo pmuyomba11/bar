@@ -5,18 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Page</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            border-radius: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            
+            font-style: italic;
+            font-size: 30px;
+        }
+
+        a, .return {
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+        }
+
+        a:hover {
+            border-bottom: 2px solid red;
+            font-size: 25px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Show Page</h1>
-    <hr>
-    <p>
-        Name : <%= drink.name %> <br>
-            Price: $<%= drink.price %> <br>
-                <img src="<%= drink.image + '.jpg' %>" alt="drink">
+    <h1>Showing drinks 😊</h1>
+    
+    <div class="container">
+        <p>
+            <span>Name:</span>  <%= drink.name %> <br>
+                <span>Price:</span>  $ <%= drink.price %> <br>
+        </p>
+        <img src="<%= drink.image + '.jpg' %>" alt="drink">
 
+
+    </div>
+    <p class="return">
+        <a href="/drinks">Back to HomePage</a>
     </p>
-    <a href="/drinks">Back to HomePage</a>
+    
 </body>
 
 </html>
