@@ -3,7 +3,8 @@
 
 GitPub is a web application that helps users discover the latest drinks available at pubs for the sober curious. With GitPub, users can browse a list of drinks available at the pub, view details about each drink, and more!
 
-![Screenshot of GitPub](screen1.png)(screen2.png)
+![Screenshot of GitPub](screen1.png)
+![Screenshot of GitPub](screen2.png)
 
 ## Features
 
